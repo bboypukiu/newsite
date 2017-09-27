@@ -1,0 +1,11 @@
+$Id: CHANGELOG 825 2013-04-15 07:42:15Z thongta $
+
+/* 2.0 - 2016-01-08 */
++ Added library of Vietnamese joined words in to Textspinner processor.
+
+/* 1.1 - 2014-03-20 */
+~ Allow users could create dictionary file in dicts folder.
+~ Check keyword in custom first.
+
+/* 1.0 - 2014-03-18 */
++ The first release.

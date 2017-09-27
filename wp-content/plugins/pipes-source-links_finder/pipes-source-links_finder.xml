@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="wppipes-engine" method="upgrade">
+	<name>Links Finder</name>
+	<author>wpbriz.com</author>
+	<creationDate>Mar 2014</creationDate>
+	<copyright>2007-2014 wpbriz.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>info@wpbriz.com</authorEmail>
+	<authorUrl>http://www.wpbriz.com</authorUrl>
+	<version>1.0</version>
+	<description>Links Finder Source for wpBriz</description>
+	<files>
+		<filename plugin="pipes-source-links_finder">pipes-source-links_finder.php</filename>
+		<filename plugin="pipes-source-links_finder">pipes-source-links_finder.xml</filename>
+		<filename>CHANGELOG</filename>
+		<filename>LICENSE</filename>
+		<filename>README</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="url" type="textarea" class="fullwidth" label="Container URLs"
+					   description="The urls that this source will get items from. Please input valid urls!"/>
+				<field name="queries" type="textarea" class="fullwidth" label="Container Area"
+					   description="The queries that this source will get items base on. Please input correct queries!"/>
+				<field name="format" class="fullwidth" type="findertext" label="Item Format"
+					   onblur="write_default_data(this.value);"
+					   description="Input the general format of item's link! For example: http://www.domain.com/(*)/(*)/(*).html"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="limit_items" type="text" label="Limit" class="limit" default="50"
+					   description="Limit of items you want to grab"/>
+                <field name="utf8decode" type="list" default="0" class="form-control" label="Decode"
+                       description="Do you want to decode the title into utf8?">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+				<field name="linkfinder_curl" type="list" default="1" label="get CURL" description="get CURL">
+					<option value="1">Level 1</option>
+					<option value="2">Level 2</option>
+					<option value="3">Level 3</option>
+					<option value="4">Level 4</option>
+					<option value="5">Level 5</option>
+                    <option value="6">Level 6</option>
+				</field>
+				<field name="pcache" type="list" default="1" label="Cache" description="Cache is turn on. Your pipe will be run faster.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="force_title" type="list" default="1" label="Force Title" description="If you turn on this option, the items without title will be ignored.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="absolute_host" type="text" label="Absolute Host" class="absolutehost"
+					   default=""
+					   description="The absolute host to the link want to be got"/>
+                <field name="custom_ck" type="hidden" class="custom_ck" default="location.href=1;"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

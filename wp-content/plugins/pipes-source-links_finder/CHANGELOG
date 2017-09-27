@@ -1,0 +1,17 @@
+$Id: CHANGELOG 142 2014-01-25 01:46:18Z thongta $
+
+= 1.3 =
+~ Fixed bug with multiple links.
++ Forced to use the link as title in case <a> tag not have text content.
+
+= 1.2 =
++ Allowed input the absolute path
++ Displayed title and link in testing screen
+
+= 1.1 =
++ Add allow use utf8_decode or not
+~ Change name of params: limit->limit_items
+~ Fix bugs when get default item
+
+= 1.0 =
+* The first release.

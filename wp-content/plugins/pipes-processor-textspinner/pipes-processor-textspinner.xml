@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.1" type="plugin" group="wppipes-processor" method="upgrade">
+	<name>Text Spinner</name>
+	<author>wpbriz.com</author>
+	<creationDate>March 2014</creationDate>
+	<copyright>© 2007-2014 wpbriz.com. All rights reserved.</copyright>
+	<authorEmail>info@wpbriz.com</authorEmail>
+	<authorUrl>http://www.wpbriz.com</authorUrl>
+	<version>1.1</version>
+	<description>WPpipes - Text Spinner processor</description>
+
+	<files>
+		<folder>fields</folder>
+		<folder>dicts</folder>
+		<folder>libs</folder>
+		<filename plugin="pipes-processor-textspinner">pipes-processor-textspinner.php</filename>
+		<filename plugin="pipes-processor-textspinner">pipes-processor-textspinner.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="dicts" type="dictionaries" default="custom" label="Dictionary" description="Choose the dictionary">
+					<option value="custom">Custom Only</option>
+					<option value="en">English</option>
+					<option value="fr">French</option>
+				</field>
+				<field name="random" type="list" default="0" label="Random" description="Random">
+					<option value="0">NO</option>
+					<option value="1">YES</option>
+				</field>
+				<field name="custom" type="textarea" class="fullwidth" rows="5" cols="30" label="Custom"
+					   description="Define texts spinner by yourself! For example: word,word1,word2,word3"/>
+				<field name="lang" type="list" default="json_vi.txt" label="Language" description="Choose the language">
+					<option value="json_vi.txt">Vietnamese</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
